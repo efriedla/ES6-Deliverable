@@ -2,11 +2,28 @@
 // {make: "honda", model: "civic", drive: Function}, where the drive function
 // logs "vroom" to the console
 
-function car(make, model, options){
-  return // your code here
+function car(make, model, options) {
+    return {
+
+        make,
+        model,
+        options,
+
+        ['make' + make]: true,
+
+
+        depreciate() {
+            this.value = 'vroom';
+        }
+    };
 }
 
-let auto = car("honda","civic")
-// returns {make: "honda", model: "civic", drive: Function}
-auto.drive()
-// logs "vroom" to the console
+let auto = car("honda","civic");
+
+
+console.log(auto);
+
+auto.depreciate();
+
+
+console.log(auto.value);

@@ -8,8 +8,8 @@
 // Remember that a tag function gets an array of in-between strings as its first
 // argument, and then the interpolated values as further arguments.
 
-function html(...) {
-  // Your code here
+function html(...values) {
+     return values.join();
 }
 
 const mustEscape = '<>&"'
@@ -19,5 +19,6 @@ function escapeHTML(string) {
   return String(string).replace(/"/g, "&quot;").replace(/</g, "&lt;")
   	.replace(/>/g, "&gt;").replace(/&/g, "&amp;")
 }
+//answer-ish found on https://www.eventbrite.com/engineering/learning-es6-rest-spread-operators/
 
 // source: http://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#HTML_templating
